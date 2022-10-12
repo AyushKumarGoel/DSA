@@ -1,0 +1,65 @@
+
+#include<stdio.h>
+int main()
+{
+    int a[10],b[10],c[20];
+    int n1,n2;
+    printf("enter the limit of array_1");
+    scanf("%d",&n1);
+    printf("enter the limit of array_1");
+    scanf("%d",&n2);
+    printf("\nenter the limit of array_1\n");
+    for(int i=0;i<n1;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("\nenter the limit of array_2\n");
+    for(int i=0;i<n2;i++)
+    {
+        scanf("%d",&b[i]);
+    }
+    int i=0,j=0,k=0;
+    while(i<n1 && j<n2)
+    {
+        if(a[i]<b[j])
+        {
+            c[k]=a[i];
+            i++;
+            k++;
+        }
+        else 
+        {
+            if(b[j]<a[i])
+            {
+                c[k]=b[j];
+                j++;
+                k++;
+            }
+            else
+            {
+                c[k]=a[i];
+                i++;
+                k++;
+                j++;
+            }
+        }
+    while(i<n1)
+    {
+        c[k]=a[i];
+        k++;
+        i++;
+    }
+    while (j<n2)
+    {
+        c[k]=b[j];
+        k++;
+        j++;
+    }
+    }
+    printf("\nOUTPUT\n");
+    for(int j=0;j<k;j++)
+    {
+        printf("%d",c[j]);
+    }
+    return 0;
+}
