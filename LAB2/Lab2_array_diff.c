@@ -23,14 +23,14 @@ int main()
         for(j=0;j<n2;j++)
         {
             if(b[j]==a[i])
-             break;
+            break;
         }
         if(j==n2)
         {   
             for(l=0;l<k;l++)
             {
                 if(c[l]==a[i])
-                 break;
+                break;
             }
             if(l==k)
             {
